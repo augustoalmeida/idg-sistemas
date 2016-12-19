@@ -1,0 +1,47 @@
+// -----------------------------------------------
+// Contraste
+// -----------------------------------------------
+
+.contraste {
+  &,
+  #cabecalho,
+  #portal-title,
+  #portal-description,
+  #subir,
+  .menu,
+  #mapa,
+  pre,
+  .demo,
+  input,
+  #portal-searchbox input,
+  #portal-searchbox button,
+  .alert,
+  .form-control,
+  fieldset,
+  legend,
+  .btn,
+  .panel,
+  .panel-heading {
+    background: $preto;
+    color: $branco;
+
+    &,
+    a,
+    .fa,
+    h1,
+    h2,
+    h3,
+    p,
+    dt,
+    .menu {
+      background: $preto;
+      color: $branco;
+    }
+  }
+
+  #mapa {
+    .menu {
+      border-color: $branco;
+    }
+  }
+}

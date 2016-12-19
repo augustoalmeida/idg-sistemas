@@ -1,0 +1,60 @@
+// -----------------------------------------------
+// Fontes
+// -----------------------------------------------
+
+body {
+  font-family: $fonts;
+}
+
+h1,
+h2,
+h3 {
+  color: $idg-texto;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: $h1-size;
+  line-height: $h1-line-height;
+}
+
+h2 {
+  font-size: $h2-size;
+  line-height: $h2-line-height;
+}
+
+h3 {
+  font-size: $h3-size;
+  line-height: $h3-line-height;
+}
+
+p,
+a {
+  font-size: $font-base;
+  line-height: $line-height-base;
+}
+
+p {
+  color: $idg-texto;
+}
+
+a {
+  color: $idg-links;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.pequeno {
+  font-size: $pequeno;
+  line-height: $line-height-base;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}

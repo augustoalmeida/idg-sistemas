@@ -1,0 +1,38 @@
+// -----------------------------------------------
+// Breadcrumbs
+// -----------------------------------------------
+
+#breadcrumbs {
+  padding: ($espacamento * .5) 0;
+}
+
+.breadcrumbs {
+  display: inline-block;
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+
+  li {
+    display: inline-block;
+    font-size: 11px;
+    text-transform: uppercase;
+
+    &::before {
+      content: '>';
+      margin: 0 7px;
+    }
+
+    &:first-child {
+      &::before {
+        content: '';
+        margin: 0 4px;
+      }
+    }
+
+    a {
+      font-size: 11px;
+    }
+  }
+}

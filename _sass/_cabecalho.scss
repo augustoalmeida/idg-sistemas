@@ -1,0 +1,129 @@
+// -----------------------------------------------
+// Cabeçalho IDG
+// -----------------------------------------------
+
+#cabecalho {
+  @if variable-exists(idg-header2) {
+    background: $idg-header linear-gradient(to bottom, $idg-header 0%, $idg-header2 100%);
+  } @else {
+    background: $idg-header;
+  }
+  padding: ($espacamento * .125) 0 ($espacamento * .5);
+
+  ul {
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    color: $idg-texto;
+    font-size: 11px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+#acessibilidade {
+  a {
+    margin-right: ($espacamento * .25);
+  }
+
+  span {
+    background-color: $idg-border;
+    color: $idg-links;
+    margin-left: 3px;
+    padding: 0 4px;
+  }
+}
+
+#portal-siteactions {
+  border-bottom: 1px dotted $idg-border;
+  text-align: center;
+
+  li {
+    padding: 0 ($espacamento * .125);
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  a {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+#portal-title {
+  color: $idg-links;
+  font-family: 'Open Sans';
+  font-size: 40px;
+  font-weight: 800;
+  margin: ($espacamento * .5) 0 5px;
+}
+
+#portal-description {
+  color: $idg-links;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#portal-searchbox {
+  margin-bottom: ($espacamento * .25);
+  margin-top: ($espacamento * .5);
+  position: relative;
+
+  form {
+    background-color: $branco;
+    border-color: $idg-border;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px 0 0 2px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  i {
+    font-size: 20px;
+  }
+
+  input {
+    background-color: transparent;
+    border: 0;
+    flex: 1;
+    font-size: 12px;
+    padding: 7px 8px;
+    // width: 100%;
+  }
+
+  button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    // position: absolute;
+    // right: 0;
+    // top: 6px;
+    z-index: 2;
+  }
+}
+
+#menu-mobile {
+  background-color: $cinza-medio;
+  margin-bottom: -($espacamento * .5);
+  margin-top: ($espacamento * .5);
+  padding: ($espacamento * .25) 0;
+}

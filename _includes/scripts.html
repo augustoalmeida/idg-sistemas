@@ -1,0 +1,50 @@
+<!-- barra de governo-->
+<script defer="defer" src="//barra.brasil.gov.br/barra.js" type="text/javascript"></script>
+
+<!-- jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- bootstrap-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script>
+  var wSize = $(window).width();
+  var size = wSize < 960 ? 'mobile' : 'desktop'
+  var menu = $('#menu');
+  var menus = menu.find('.menu');
+  
+  desktop(size);
+  
+  $(window).resize(function() {
+    if ($(window).width() < 960) {
+      size = 'mobile';
+      mobile(size);
+    }
+    else {
+      size = 'desktop';
+      desktop(size);
+    }
+  });
+  
+  function desktop (size) {
+    if (size === 'desktop') {
+      $(menu).removeClass().css('height', 'auto');
+      $(menus).find('dt').removeClass();
+      $(menus).find('dd').addClass('in').css('height', 'auto');
+    }
+  }
+  
+  function mobile (size) {
+    if (size === 'mobile') {
+      $(menu).addClass('collapse');
+      $(menus).find('dt').addClass('collapsed');
+      $(menus).find('dd').removeClass('in');
+    }
+  }
+  
+  $('#siteaction-contraste a').click(function() {
+    $('body').toggleClass('contraste');
+  });
+  
+  $('aside .menu dt').append('<span class="fa fa-chevron-up">');
+</script>

@@ -1,0 +1,27 @@
+// -----------------------------------------------
+// Formulários
+// -----------------------------------------------
+
+label {
+  font-size: $font-base;
+  font-weight: normal;
+}
+
+fieldset {
+  background-color: $idg-header;
+  border: 1px solid $idg-border;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+legend {
+  border: 0;
+  color: $idg-texto;
+  display: inherit;
+  font-size: $font-base;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}

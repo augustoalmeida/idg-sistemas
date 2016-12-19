@@ -1,0 +1,47 @@
+// -----------------------------------------------
+// Rodapé
+// -----------------------------------------------
+
+#subir {
+  margin: 20px 0 30px;
+  text-align: right;
+
+  a {
+    color: $idg-texto;
+
+    .fa {
+      margin-right: 10px;
+    }
+  }
+}
+
+#mapa {
+  background-color: $idg-header;
+  padding: 20px 0 0;
+
+  .linha {
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    margin: 0 0 20px;
+
+    dt {
+      background-color: transparent;
+      border: 0;
+      color: $idg-links;
+      cursor: default;
+      font-weight: 600;
+      padding: 0;
+    }
+
+    li {
+      border: 0;
+      padding: 0;
+    }
+
+    a {
+      color: $idg-texto;
+    }
+  }
+}
