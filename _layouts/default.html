@@ -7,77 +7,10 @@
     {% include barragoverno.html %}
 
     <!-- cabeçalho idg-->
-    <header id="cabecalho">
-      <div class="container">
-        <div class="row">
-          <!-- links de atalho-->
-          {% include linkstopo.html %}
-
-          <!-- links de acessibilidade-->
-          {% include linksacessibilidade.html %}
-        </div>
-
-        <div class="row">
-
-          <!-- logo-->
-          <div class="col-md-6">
-            {% include logo.html %}
-          </div>
-
-          <!-- busca do site-->
-          <div class="col-md-6 text-right">
-            {% unless page.busca == false %}
-            {% include busca.html %}
-            {% endunless %}
-          </div>
-        </div>
-      </div>
-
-      <!-- abrir menu para mobile-->
-      <div class="visible-xs visible-sm" id="menu-mobile">
-        <div class="container text-right">
-          <button class="collapsed" type="button" data-toggle="collapse" data-target="#menu">
-            <span class="fa fa-bars"></span>
-            Menu
-          </button>
-        </div>
-      </div>
-    </header>
+    {% include cabecalho.html %}
 
     <!-- corpo do site -->
-    <article>
-      <div class="container">
-
-        <!-- breadcrumbs-->
-        <div class="hidden-xs hidden-sm" id="breadcrumbs">
-          {% unless page.breadcrumbs == false %}
-          {% include breadcrumbs.html %}
-          {% endunless %}
-        </div>
-
-        <!-- área de conteúdo-->
-        <div class="row">
-
-          <!-- coluna navegação-->
-          {% unless page.navegacao == false %}
-          {% include navegacao.html %}
-          {% endunless %}
-
-          <!-- coluna conteúdo-->
-          <section class="{% if page.navegacao == false %}col-md-12{% else %}col-md-9{% endif %}">
-            <a id="conteudo"></a>
-
-            <!-- título da página-->
-            <h1>{{ page.title }}</h1>
-
-            {{ content }}
-          </section>
-        </div>
-
-        <!-- subir página-->
-        {% include subir.html %}
-      </div>
-    </article>
+    {% include corpo.html %}
 
     <!-- mapa do site -->
     {% include rodape.html %}

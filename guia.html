@@ -1,0 +1,21 @@
+---
+title: Guia de estilos
+layout: default
+order: 2
+---
+
+{% assign componentes = site.componentes | sort: 'order' %}
+{% assign i = 0 %}
+
+{% for componente in componentes %}
+  {% assign i = i | plus: 1 %}
+  
+  <p><strong>{{ i }} - {{ componente.title }}</strong>:</p>
+  {{ componente.content }}
+  <br>
+  <br>
+  {% highlight html %}
+    {{ componente.content }}
+  {% endhighlight %}
+  <hr>
+{% endfor %}

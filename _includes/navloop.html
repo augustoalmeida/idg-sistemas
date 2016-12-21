@@ -1,5 +1,6 @@
-{% for item in site.pages %}
-{% if item.title %}
+{% assign items = site.pages | sort: 'order' %}
+{% for item in items %}
+{% if item.order %}
 <li>
   <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
 </li>

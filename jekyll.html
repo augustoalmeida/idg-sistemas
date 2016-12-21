@@ -1,0 +1,70 @@
+---
+title: Jekyll
+layout: default
+order: 5
+---
+
+<blockquote>
+  <p>Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like <a href="https://daringfireball.net/projects/markdown/">Markdown</a>) and our <a href="https://github.com/Shopify/liquid/wiki">Liquid</a> renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll also happens to be the engine behind <a href="https://pages.github.com/">GitHub Pages</a>, which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers for free.</p>
+  <footer><cite><a href="http://jekyllrb.com/">Jekyll site</a></cite></footer>
+</blockquote>
+
+<h2>Estrutura geral de arquivos para o IDG</h2>
+
+<pre>
+<strong>_includes/</strong> &rarr; (diretório de códigos parciais)
+<strong>_layouts/</strong> &rarr; (diretório de templates)
+<strong>_sass/</strong> &rarr; (diretório de scss parciais)
+<strong>css/</strong> &rarr; (diretório de scss principal)
+<strong>_site</strong> &rarr; (diretório de arquivos estáticos finais)
+<strong>_config.yml</strong> &rarr; (configuração do Jekyll)
+<strong>index.html</strong> (ou index.md)
+</pre>
+
+<h2>Arquivo _config.yml</h2>
+
+{% highlight yaml %}
+# porta padrão
+port: 8080
+
+# Variáveis globais
+sistema: Sistema
+subordinacao: Subordinação
+{% endhighlight %}
+
+<h2>Template simplificado das páginas</h2>
+
+{% highlight html %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  {{ "{% include head.html " }}%}
+  <body class="idg">
+    {{ "{% include barragoverno.html " }}%}
+    {{ "{% include cabecalho.html " }}%}
+    {{ "{% include corpo.html " }}%}
+    {{ "{% include rodape.html " }}%}
+    <div id="footer-brasil"></div>
+    {{ "{% include scripts.html " }}%}
+  </body>
+</html>
+{% endhighlight %}
+
+<h2>Variáveis locais para usar nas páginas</h2>
+
+{% highlight yaml %}
+---
+title: Título da página
+layout: default
+order: 1 # ordem da página na navegação
+navegacao: false # desabilitar navegação lateral
+mapa: false # desabilitar mapa do rodapé
+breadcrumbs: false # desabilitar breadcrumbs
+---
+{% endhighlight %}
+
+<h2>Links úteis</h2>
+<ul>
+  <li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a></li>
+  <li><a href="http://shopify.github.io/liquid/">Liquid - Template language</a></li>
+  <li><a href="http://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags">How to escape liquid template tags?</a></li>
+</ul>

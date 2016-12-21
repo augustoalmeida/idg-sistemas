@@ -1,6 +1,7 @@
 ---
 title: Acessibilidade
 layout: default
+order: 3
 ---
 
 O Portal de Serviços segue o novo modelo de identidade digital padrão do governo federal, que atende às principais recomendações de acessibilidade indicadas para web.

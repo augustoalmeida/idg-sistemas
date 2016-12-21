@@ -1,0 +1,36 @@
+<header id="cabecalho">
+  <div class="container">
+    <div class="row">
+      <!-- links de atalho-->
+      {% include linkstopo.html %}
+
+      <!-- links de acessibilidade-->
+      {% include linksacessibilidade.html %}
+    </div>
+
+    <div class="row">
+
+      <!-- logo-->
+      <div class="col-md-6">
+        {% include logo.html %}
+      </div>
+
+      <!-- busca do site-->
+      <div class="col-md-6 text-right">
+        {% unless page.busca == false %}
+        {% include busca.html %}
+        {% endunless %}
+      </div>
+    </div>
+  </div>
+
+  <!-- abrir menu para mobile-->
+  <div class="visible-xs visible-sm" id="menu-mobile">
+    <div class="container text-right">
+      <button class="collapsed" type="button" data-toggle="collapse" data-target="#menu">
+        <span class="fa fa-bars"></span>
+        Menu
+      </button>
+    </div>
+  </div>
+</header>
